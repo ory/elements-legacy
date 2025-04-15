@@ -1,5 +1,9 @@
 <h1 align="center"><img src="https://raw.githubusercontent.com/ory/meta/master/static/banners/elements.png" alt="Ory Elements - A component library for login, registration and account pages."></h1>
 
+> [!NOTE]  
+> This package is now in maintance mode. We will continue supporting these
+> packages, but recommend migrating to @ory/elements-react.
+
 # Ory Elements
 
 Ory Elements is a component library that makes building login, registration and
