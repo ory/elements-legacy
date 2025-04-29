@@ -21,6 +21,8 @@ export function CaptchaSection({ nodes }: CaptchaSectionProps) {
       ) {
         return <div id={node.attributes.id} key={node.attributes.id}></div>
       }
+    } else if (node.attributes.node_type === "div") {
+      return <div id={node.attributes.id} key={node.attributes.id}></div>
     }
     return <Node node={node} key={k} />
   })
