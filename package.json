@@ -37,7 +37,7 @@
     "@nx/react": "19.5.4",
     "@nx/vite": "19.5.4",
     "@nx/web": "19.5.4",
-    "@ory/client": "1.6.2",
+    "@ory/client": "1.20.9",
     "@playwright/experimental-ct-react": "1.46.0",
     "@preact/preset-vite": "2.5.0",
     "@storybook/addon-docs": "8.3.0",

@@ -1,7 +1,7 @@
 // Copyright © 2024 Ory Corp
 // SPDX-License-Identifier: Apache-2.0
 
-import { UiNode } from "@ory/client"
+import { UiNode, UiNodeDivisionAttributes } from "@ory/client"
 import { isUiNodeTextAttributes } from "../../../ui"
 import { Node } from "./node"
 
@@ -22,7 +22,8 @@ export function CaptchaSection({ nodes }: CaptchaSectionProps) {
         return <div id={node.attributes.id} key={node.attributes.id}></div>
       }
     } else if (node.attributes.node_type === "div") {
-      return <div id={node.attributes.id} key={node.attributes.id}></div>
+      const { id } = node.attributes as UiNodeDivisionAttributes
+      return <div id={id} key={id}></div>
     }
     return <Node node={node} key={k} />
   })
