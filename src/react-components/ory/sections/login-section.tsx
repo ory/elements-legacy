@@ -82,7 +82,7 @@ export const LoginSection = ({
             nodes: nodes,
             groups: ["password"],
             attributes: "submit",
-            excludeAttributeTypes: ["hidden", "input"],
+            excludeAttributeTypes: ["hidden"],
           }}
         />
       </div>
