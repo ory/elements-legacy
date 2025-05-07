@@ -21,7 +21,7 @@ export const IdentifierFirstLoginSection = (
   flow: SelfServiceFlow,
 ): JSX.Element | null => {
   const nodes = flow.ui.nodes
-  return hasIdentifierFirst(nodes) ? (
+  return hasIdentifierFirst(nodes) && flow.active !== "identifier_first" ? (
     <div className={gridStyle({ gap: 32 })}>
       <FilterFlowNodes
         filter={{
@@ -82,7 +82,7 @@ export const LoginSection = ({
             nodes: nodes,
             groups: ["password"],
             attributes: "submit",
-            excludeAttributeTypes: ["hidden"],
+            excludeAttributeTypes: ["hidden", "input"],
           }}
         />
       </div>
