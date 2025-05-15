@@ -10,11 +10,13 @@ import { SelfServiceFlow } from "../helpers/types"
 import { hasOidc, hasSaml } from "../helpers/utils"
 
 export const OIDCSection = (flow: SelfServiceFlow): JSX.Element | null => {
+  const withoutDefaultGroup = !(flow.active === "oidc" || flow.active === "saml")
+
   const hasTraits =
     filterNodesByGroups({
       nodes: flow.ui.nodes,
       groups: ["oidc", "saml"],
-      withoutDefaultGroup: true,
+      withoutDefaultGroup,
       excludeAttributeTypes: "submit",
     }).length > 0
 
@@ -26,7 +28,7 @@ export const OIDCSection = (flow: SelfServiceFlow): JSX.Element | null => {
             filter={{
               nodes: flow.ui.nodes,
               groups: ["oidc", "saml"],
-              withoutDefaultGroup: true,
+              withoutDefaultGroup,
               excludeAttributeTypes: ["submit"],
             }}
           />
