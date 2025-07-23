@@ -308,7 +308,7 @@ export const Node = ({
         if (
           node.meta.label?.id === 1070007 || // TODO: remove this once everyone has migrated to the fix (https://github.com/ory/kratos/pull/3067)
           node.meta.label?.id === 1070008 ||
-          node.meta.label?.id === 1040010
+          node.meta.label?.id === 1040008
         ) {
           // on html forms the required flag on an input field will prevent the form from submitting.
           // we disable validation for this form since the resend button does not rely on any input fields
