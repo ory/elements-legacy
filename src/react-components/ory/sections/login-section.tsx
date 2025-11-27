@@ -8,7 +8,7 @@ import { FormattedMessage } from "react-intl"
 import { gridStyle } from "../../../theme"
 import { ButtonLink, CustomHref } from "../../button-link"
 import { FilterFlowNodes } from "../helpers/filter-flow-nodes"
-import { hasPassword, hasIdentifierFirst } from "../helpers/utils"
+import { hasPassword, hasIdentifierFirst, hasCaptcha } from "../helpers/utils"
 import { SelfServiceFlow } from "../helpers/types"
 import { CaptchaSection } from "../helpers/captcha"
 
@@ -87,5 +87,7 @@ export const LoginSection = ({
         />
       </div>
     </>
+  ) : hasCaptcha(nodes) ? (
+    <CaptchaSection nodes={nodes} />
   ) : null
 }
