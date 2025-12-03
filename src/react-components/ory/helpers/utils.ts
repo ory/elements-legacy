@@ -17,6 +17,7 @@ export const hasIdentifierFirst = hasGroup("identifier_first")
 export const hasLookupSecret = hasGroup("lookup_secret")
 export const hasTotp = hasGroup("totp")
 export const hasCode = hasGroup("code")
+export const hasCaptcha = hasGroup("captcha")
 
 export const hasHiddenIdentifier = (nodes: UiNode[]) =>
   nodes?.some(

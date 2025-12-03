@@ -32,7 +32,7 @@ export const FilterFlowNodes = ({
 
   const nodes = filterNodesByGroups(filter)
     // we don't want to map the csrf token every time, only on the form level
-    .filter((node) => includeCSRF || !(getInputName(node) === "csrf_token"))
+    .filter((node) => includeCSRF ?? !(getInputName(node) === "csrf_token"))
     .map((node, k) => ({
       node: (
         <Node

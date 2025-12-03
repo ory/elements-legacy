@@ -6,7 +6,7 @@ import { JSX } from "react"
 
 import { gridStyle } from "../../../theme"
 import { FilterFlowNodes } from "../helpers/filter-flow-nodes"
-import { hasPassword } from "../helpers/utils"
+import { hasCaptcha, hasPassword } from "../helpers/utils"
 import { CaptchaSection } from "../helpers/captcha"
 
 export interface RegistrationSectionProps {
@@ -37,5 +37,7 @@ export const RegistrationSection = ({
         }}
       />
     </div>
+  ) : hasCaptcha(nodes) ? (
+    <CaptchaSection nodes={nodes} />
   ) : null
 }
