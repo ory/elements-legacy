@@ -15,8 +15,7 @@ import { Message, MessageStyleProps } from "./message"
 import { useIdWithFallback } from "../common/useIdWithFallback"
 
 export interface InputFieldProps
-  extends React.InputHTMLAttributes<HTMLInputElement>,
-    MessageStyleProps {
+  extends React.InputHTMLAttributes<HTMLInputElement>, MessageStyleProps {
   header: string
   helperMessage?: React.ReactNode | string
   messageTestId?: string

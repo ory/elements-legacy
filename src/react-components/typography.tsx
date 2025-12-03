@@ -14,7 +14,8 @@ import {
 type typographyStyle = TypographyStyle & Record<string, unknown>
 type colorSprinkle = ColorSprinkle & Record<string, unknown>
 export interface TypographyProps
-  extends Omit<React.BaseHTMLAttributes<HTMLDivElement>, "color">,
+  extends
+    Omit<React.BaseHTMLAttributes<HTMLDivElement>, "color">,
     typographyStyle,
     colorSprinkle {
   children: React.ReactNode

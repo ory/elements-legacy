@@ -14,8 +14,7 @@ import { Message, MessageStyleProps } from "./message"
 import { useIdWithFallback } from "../common/useIdWithFallback"
 
 export interface CheckboxProps
-  extends React.InputHTMLAttributes<HTMLInputElement>,
-    MessageStyleProps {
+  extends React.InputHTMLAttributes<HTMLInputElement>, MessageStyleProps {
   className?: string
   label?: string
   helperMessage?: React.ReactNode | string

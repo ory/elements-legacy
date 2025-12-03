@@ -48,7 +48,8 @@ export interface UserAuthFormAdditionalProps {
  * @param className - css class overrides for the form component
  */
 export interface UserAuthFormProps
-  extends Omit<React.FormHTMLAttributes<HTMLFormElement>, "onSubmit">,
+  extends
+    Omit<React.FormHTMLAttributes<HTMLFormElement>, "onSubmit">,
     UserAuthFormAdditionalProps {
   flow: SelfServiceFlow
   children: React.ReactNode

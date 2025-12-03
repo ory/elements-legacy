@@ -10,8 +10,7 @@ import { MessageStyle, messageStyle, typographyStyle } from "../theme"
 export type MessageStyleProps = MessageStyle & Record<string, unknown>
 
 export interface MessageProps
-  extends React.HTMLAttributes<HTMLDivElement>,
-    MessageStyleProps {
+  extends React.HTMLAttributes<HTMLDivElement>, MessageStyleProps {
   className?: string
   children?: React.ReactNode
 }

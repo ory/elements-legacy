@@ -9,8 +9,7 @@ import { ButtonStyle, buttonStyle } from "../theme/button.css"
 type buttonStyle = ButtonStyle & Record<string, unknown>
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    buttonStyle {
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>, buttonStyle {
   header: string
   fullWidth?: boolean
   className?: string

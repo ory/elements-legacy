@@ -15,8 +15,7 @@ import {
 type buttonSocialStyle = ButtonSocialStyle & Record<string, unknown>
 
 export interface ButtonSocialProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    buttonSocialStyle {
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>, buttonSocialStyle {
   header: string
   brand: string
   fullWidth?: boolean
