@@ -54,7 +54,25 @@ export default defineConfig({
     },
     rollupOptions: {
       treeshake: "smallest",
-      external: ["react", "react-dom"],
+      // Externalize React AND its JSX runtime. Without the jsx-runtime entries
+      // Vite bundles React 18's automatic runtime into the dist, which emits
+      // React-18-format elements that React 19 rejects at render. Externalizing
+      // makes each consumer supply their own runtime, so @ory/elements works on
+      // both React 18 and 19.
+      external: [
+        "react",
+        "react-dom",
+        "react/jsx-runtime",
+        "react/jsx-dev-runtime",
+      ],
+      output: {
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+          "react/jsx-runtime": "jsxRuntime",
+          "react/jsx-dev-runtime": "jsxDevRuntime",
+        },
+      },
     },
   },
 })
